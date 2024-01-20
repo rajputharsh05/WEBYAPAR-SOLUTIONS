@@ -10,7 +10,7 @@
 <body>
     <div id="root">
         <button class="view-btn" onclick="handleViewButton()">view</button>    
-        <div class="uploder">
+        <div id="uploader">
             <label class="username-label" for="username">Name</label>
             <input id="username" type="text">
             <label class="photo-label" for="photo">Photo</label>
@@ -20,25 +20,24 @@
             <button class="upload-btn" onclick="handleSubmit()">
                     upload
             </button>
-        </div>
-        <div id="hidden-bar" >
+        </div> 
+        <div id="hidden-bar">
             <div class="main-content">
-                <button class="close-btn" onclick="handleCloseButton()">Close</button>
+                <button class="close-btn" onclick="handleCloseButton()">Back </button>
                 <div class="hidden-bar-uploder">
                     <label class="hidden-bar-username-label" for="username">Name</label>
                     <input id="hidden-bar-username" type="text">
                     <label class="hidden-bar-photo-label" for="photo">Photo</label>
-                    <div onclick="handleUpload()" class="hidden-bar-img-box">
-                        <input id="photo" type="file" onchange="handleFileSelect()">
+                    <div  class="hidden-bar-img-box">
+                        <img src="" alt="abc">
                     </div>
-                    <button class="hidden-bar-upload-btn" onclick="handleSubmit()">
-                            upload
-                    </button>
+                    <p class="hidden-bar-msg">Testing</p>
                 </div>
-            </div>
-        </div>
+            </div> 
+        </div> 
     </div>
-    
     <script src="../js/UserDetailUpload.js"></script>
     </body>
 </html>
+
+

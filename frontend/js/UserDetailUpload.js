@@ -18,16 +18,15 @@ function handleFileSelect(){
 }
 
 function handleViewButton(){
-    
-    const root = document.getElementById("root");
+    console.log("heyy")
+    const root = document.getElementById("uploader");
     const hiddenbar = document.getElementById("hidden-bar");
-    root.style.setProperty('opacity',0.9);
+    root.style.setProperty('opacity',0.2);
     hiddenbar.style.setProperty('display',"block");
-    
 }
 
 function handleCloseButton(){
-    const root = document.getElementById("root");
+    const root = document.getElementById("uploader");
     const hiddenbar = document.getElementById("hidden-bar");
     root.style.setProperty('opacity',1);
     hiddenbar.style.setProperty('display',"none");

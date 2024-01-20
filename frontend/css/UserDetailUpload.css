@@ -12,7 +12,7 @@
     width: 100vw;
 }
 
-.uploder{
+#uploader{
     height: 60%;
     width: 35%;
     display: flex;
@@ -101,4 +101,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+#hidden-bar-username{
+    height: 8vh;
+    width: 70%;
+}
+
+.hidden-bar-username-label{
+    margin-right: 24vw;
+}
+
+.hidden-bar-photo-label{
+    margin-top: 2vh;
+}
+
+.hidden-bar-img-box{
+    height: 40vh;
+    width: 70%;
+    border: 1px solid black;
+}
+
+.hidden-bar-msg{
+    margin-top: 3vh;
 }
