@@ -1,0 +1,55 @@
+.body{
+    margin: 0;
+    padding: 0;
+}
+
+.parent{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.right-child{
+    height: 100vh;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-child{
+   height: 100vh;
+   width: 55%;
+   background-color: aquamarine;
+}
+
+.information-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.information-box h1 {
+    margin-bottom: 6vh;
+    color: #646464;
+    font-weight: 600;
+}
+
+.information-box input {
+    width: 150%;
+    height: 6vh;
+    border-radius: 2px;
+    border: 1px solid black;
+}
+
+#btn {
+   margin-top: 3vh;
+   height: 6vh;
+   width: 155%;
+   background-color: #0500FF;
+   color: white;
+   border: 1px black;
+   border-radius: 5px;
+}
