@@ -1,9 +1,13 @@
 const express = require("express")
 const bodyparser = require("body-parser");
 const cors = require("cors");
+const status = require("express-status-monitor");
 const ConnectToDataBase = require("./database/db");
 const LoginRouter = require("./routes/loginRoutes");
 const server = express();
+
+server.use(status());
+
 server.use(cors(
     {
         origin: 'http://127.0.0.1:5500',
