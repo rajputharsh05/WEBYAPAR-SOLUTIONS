@@ -13,6 +13,10 @@ server.use(cors(
 ));
 
 
+server.get("/",(req,res)=>{
+    res.json("server is there");
+})
+
 server.use(bodyparser.urlencoded({ extended: false }))
 server.use(bodyparser.json());
 server.use(LoginRouter)

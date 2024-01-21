@@ -22,23 +22,6 @@ async function clickHandler() {
                 credentials: 'include',
             });
 
-            // Retrieve 'Set-Cookie' header
-            const headers = response.headers;
-
-            const headersObject = {};
-            headers.forEach((value, name) => {
-                headersObject[name] = value;
-            });
-
-            console.log('Response Headers:', headersObject);
-
-            const setCookieHeader = response.headers.get("JWT");
-
-            console.log('Set-Cookie Header:', setCookieHeader);
-            alert(setCookieHeader)
-            // Access other headers if needed
-            
-
             if (!response.ok) {
 
                 throw new Error("HTTP SERVER ERROR");
@@ -47,8 +30,10 @@ async function clickHandler() {
 
                 console.log("Moving to the next page");
 
-                window.location.href = "userDetailUpload.html";
+                const setCookieHeader = response.headers.get("JWT");
+                alert(setCookieHeader)
 
+               
             }
         }
     } catch (error) {

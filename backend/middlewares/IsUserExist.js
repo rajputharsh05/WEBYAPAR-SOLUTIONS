@@ -16,12 +16,12 @@ const VerifyUser = async (req,res,next) => {
 
             req.body.isThere = true;
             req.body.DBpass = UserPresentInDataBase[0].password;
-            req.body.isAdmin = UserPresentInDataBase.isAdmin;
+            req.body.isAdmin = UserPresentInDataBase[0].isAdmin;
 
         }else
         {
             req.body.isThere = false;
-            req.body.isAdmin = UserPresentInDataBase.isAdmin;
+            req.body.isAdmin = false;
         }
         
         next();
