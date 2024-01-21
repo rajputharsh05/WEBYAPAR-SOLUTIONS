@@ -1,20 +1,21 @@
 const memberModel = require("../models/MemberModel");
 
 
-const VerifyUser = (req,res,next) => {
+const VerifyUser = async (req,res,next) => {
 
     try {
     
         const { id } = req.query;
                 
-        const UserPresentInDataBase = memberModel.find({ id });
+        const UserPresentInDataBase = await memberModel.find({ id });
 
+        console.log(UserPresentInDataBase);
         
-        if(UserPresentInDataBase)
+        if(UserPresentInDataBase.length === 1)
         {
 
             req.body.isThere = true;
-            req.body.DBpass = UserPresentInDataBase.password;
+            req.body.DBpass = UserPresentInDataBase[0].password;
             req.body.isAdmin = UserPresentInDataBase.isAdmin;
 
         }else

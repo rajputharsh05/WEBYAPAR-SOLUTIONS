@@ -2,7 +2,9 @@ const btn = document.getElementById("btn");
 btn.addEventListener("click", clickHandler)
 
 async function clickHandler() {
+    
     console.log("Helleo");
+
     try{
         const emptyStr = "";
         const idEle = document.getElementById("id");

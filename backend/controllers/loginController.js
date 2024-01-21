@@ -2,23 +2,31 @@ const memberModel = require("../models/MemberModel");
 
 
 const LoginController =  async (req,res) => {
-    const { id } = req.query;
-    const { password } = req.body;
     
+    const { token , password } = req.body;
+    const { id } = req.query;
+    
+
     try{
 
-        const isUserPresentInDatabase = memberModel.find({ id });
-
-        if(isUserPresentInDatabase)
+        if(req.body.isThere === true)
         {
-              
+            
+            res.cookie("JWT",token);
+
+            res.json("User is already there");
+    
         }else{    
+
+            
             const NewMember = new memberModel({
                 id,
                 password,
             })
             
             await NewMember.save();
+
+            res.cookie("JWT",token);
             
             res.status(200).json("user save");
             
@@ -35,3 +43,8 @@ const LoginController =  async (req,res) => {
 module.exports = {
     LoginController,
 }
+
+
+
+
+
