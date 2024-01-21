@@ -4,12 +4,15 @@ const cors = require("cors");
 const ConnectToDataBase = require("./database/db");
 const LoginRouter = require("./routes/loginRoutes");
 const server = express();
+server.use(cors(
+    {
+        origin: 'http://127.0.0.1:5500',
+        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+        credentials: true,
+    }
+));
 
 
-server.use(cors({ 
-    credentials: true ,
-    origin : "http://127.0.0.1:5500/"
-}));
 server.use(bodyparser.urlencoded({ extended: false }))
 server.use(bodyparser.json());
 server.use(LoginRouter)
